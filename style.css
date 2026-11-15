@@ -1,0 +1,20 @@
+.hidden-answer {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 100px;
+  height: 20px;
+  opacity: 0.02;
+  border: none;
+  background: transparent;
+  color: transparent;
+}
+
+
+#caseImage {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
