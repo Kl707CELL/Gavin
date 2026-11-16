@@ -18,3 +18,8 @@
   display: block;
   margin-top: 20px;
 }
+
+#motherImage {
+  width: 300px;
+  max-width: 100%;
+}
