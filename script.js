@@ -1,11 +1,12 @@
 
+//DO NOT USE INSPECT TO FIGURE THIS OUT PLEASE
 const secretCode = document.querySelector("#secretCode");
 const submitBtn = document.querySelector("#submitBtn");
 
 submitBtn.addEventListener("click", () => {
   const enteredCode = secretCode.value.trim();
 
-  if (enteredCode === "uoiao") {
+  if (enteredCode === "uoiaoo") {
 
     document.body.innerHTML = `
       <h1>Diary</h1>
@@ -42,6 +43,9 @@ submitBtn.addEventListener("click", () => {
 
       <p>November 12, 1973</p>
       <p>My mom and dad are fighting <a href="#" id="secretLink">a</a></p>
+
+      <p>November 13, 1973</p>
+      <p>My sister has been talking walks at night. Weird.</p>
     `;
 
     const secretLink = document.querySelector("#secretLink");
@@ -56,7 +60,7 @@ submitBtn.addEventListener("click", () => {
 
         <p>During evening, authorities transferred handwritten observations; forensic records remained incomplete.</p>
 
-        <p>Archived record numbers were listed separately: 1 9 6 and 5.</p>
+        <p>Archived record numbers were listed separately: 1 9 7 and 3.</p>
 
         <p>
           01:01<br>
@@ -87,18 +91,101 @@ submitBtn.addEventListener("click", () => {
 
           const answer = hiddenAnswer.value.trim().toUpperCase();
 
-          if (answer === "DEATH OF 1965") {
+          if (answer === "DEATH OF 1973") {
 
             document.body.innerHTML = `
               <h1>CONFIDENTIAL CASE FILE</h1>
               <p>ARCHIVAL DIVISION — 1965</p>
-            
-            <img src="https://i.imgur.com/lMJHG0D.jpeg" id="caseImage">
-            
-            <p>CHARLOTTE'S DEATH 1965</p>
-            
-            
+
+              <img src="https://i.imgur.com/lMJHG0D.jpeg" id="caseImage">
+
+              <p>CHARLOTTE'S DEATH 1973</p>
+              <p>Charlotte had been brutally ███████ ██ █████ about █ times</p>
+              <p>Authorities discovered that her body was ████ ██ pieces and had been mangled.</p>
+              <p>MISSING REPORT</p>
+              <p>Charlotte had gone missing during November 14, 1973.</p>
+              <p>Police held a missing person investigation 2 days after the report</p>
+              <p>No trace of Charlotte was found and was called</p>
+              <p>51 days after the investigation was called, only then was Charlotte's body found</p>
+              <p>She was found ██ miles away from her house, and was deceased in an abandoned house located at ██ ████████ ██.</p>
+              <p>Forensics revealed that she had been deceased for 53 days, revealing that she was dead the day she went missing.</p>
+
+              <h1>WHO WAS KILLED</h1>
+              <input type="text" id="sisterAnswer" class="sisterAnswer">
             `;
+
+            const sisterAnswer = document.querySelector("#sisterAnswer");
+
+            sisterAnswer.addEventListener("keydown", (event) => {
+              if (event.key === "Enter") {
+
+                const answer = sisterAnswer.value.trim().toUpperCase();
+
+                if (answer === "SISTER") {
+                  document.body.innerHTML = `
+              <h1>INTERVIEW #1</h1>
+              <p>Charlotte's mother was brought into an interrogation room</p>
+              <img src="https://i.redd.it/cevawuhbgz9g1.jpeg" id="motherImage">
+              <p><strong>INTERVIEWER:</strong> Thank you for coming in. We just have a few questions regarding Charlotte's disappearance.</p>
+
+<p><strong>MOTHER:</strong> Of course. I just want to know where she is.</p>
+
+<p><strong>INTERVIEWER:</strong> Let's start with November 14. Where were you that evening?</p>
+
+<p><strong>MOTHER:</strong> I was at a gas station. I needed to pick something up before heading home.</p>
+
+<p><strong>INTERVIEWER:</strong> Do you remember what time?</p>
+
+<p><strong>MOTHER:</strong> Around 8:30pm.</p>
+
+<p><strong>INTERVIEWER:</strong> And what exactly did you purchase?</p>
+
+<p><strong>MOTHER:</strong> A pack of cigarettes..</p>
+
+<p><strong>INTERVIEWER:</strong> Did you notice anyone else inside the station?</p>
+
+<p><strong>MOTHER:</strong> There was a man near the entrance.</p>
+
+<p><strong>INTERVIEWER:</strong> Did you speak to him?</p>
+
+<p><strong>MOTHER:</strong> No.</p>
+
+<p><strong>INTERVIEWER:</strong> You don't think so?</p>
+
+<p><strong>MOTHER:</strong> Yes.</p>
+
+<p><strong>INTERVIEWER:</strong> I see. Now, when was the last time you saw Charlotte?</p>
+
+<p><strong>MOTHER:</strong> That morning. She said she was going out for a walk.</p>
+
+<p><strong>INTERVIEWER:</strong> Did she mention where she was going?</p>
+
+<p><strong>MOTHER:</strong> No. She said. Uh, something about a walk.</p>
+
+<p><strong>INTERVIEWER:</strong> Was anything unusual about her behaviour?</p>
+
+<p><strong>MOTHER:</strong> No.</p>
+
+<p><strong>INTERVIEWER:</strong> One last question. Did you notice anything unusual on your way home that evening?</p>
+
+<p><strong>MOTHER:</strong> No. Nothing I can remember.</p>
+
+<p><strong>INTERVIEWER:</strong> Alright. That will be all for today.</p>
+
+<p><strong>[END OF TRANSCRIPT]</strong></p>
+<button id="continueBtn">CONTINUE</button>
+              `;
+                 const continueBtn = document.querySelector("#continueBtn");
+            continueBtn.addEventListener("click", () => {
+            document.body.innerHTML = `
+            <h1>INTERVIEW #2</h1>`
+            });
+                } else {
+                  console.log("Incorrect answer!");
+                }
+
+              }
+            });
 
           } else {
             console.log("Incorrect answer!");
